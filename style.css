@@ -37,7 +37,7 @@ a {
     position: relative;
     isolation: isolate;
     min-height: 620px;
-    background: #e8e4f2 url('./public/stargate-hero1.png') center top/cover no-repeat;
+    background: #e8e4f2 url('./images/stargate-hero1.png') center top/cover no-repeat;
     overflow: hidden
 }
 
