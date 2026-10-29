@@ -37,7 +37,7 @@ a {
     position: relative;
     isolation: isolate;
     min-height: 620px;
-    background: #e8e4f2 url('./images/stargate-hero1.png') center top/cover no-repeat;
+    background: #e8e4f2 url('./public/stargate-hero1.png') center top/cover no-repeat;
     overflow: hidden
 }
 
@@ -630,5 +630,272 @@ a {
     .featured-card,
     .contact-card {
         transition: none
+    }
+}
+
+
+
+
+
+/* ==========================
+   CALL US - STAR GATE
+========================== */
+
+.call-us-section {
+    padding: 65px 24px;
+    background: linear-gradient(145deg, #f9f7fd, #ffffff);
+    border-radius: 24px;
+    margin: 45px auto;
+    max-width: 1150px;
+}
+
+.call-us-heading {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.call-us-eyebrow {
+    display: inline-block;
+    color: #9475c8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.call-us-heading h2 {
+    color: #25104f;
+    font-size: clamp(30px, 4vw, 42px);
+    margin: 0 0 12px;
+    /* font-family: 'Playfair Display', serif; */
+    font: italic 500 clamp(30px, 4vw, 54px)/1.15 'Playfair Display', serif;
+}
+
+.call-us-heading p {
+    color: #777184;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.call-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.call-us-card {
+    background: #ffffff;
+    border: 1px solid #e9e1f5;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(37, 16, 79, 0.05);
+    transition: border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.call-us-card:hover {
+    border-color: #c8b4e9;
+    box-shadow: 0 12px 30px rgba(37, 16, 79, 0.10);
+    transform: translateY(-3px);
+}
+
+.call-us-toggle {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 16px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+}
+
+.call-us-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: #f0e9fb;
+    color: #5b348d;
+    font-size: 19px;
+}
+
+.call-us-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.call-us-info strong {
+    color: #25104f;
+    font-size: 15px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.call-us-info small {
+    color: #898294;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.call-us-arrow {
+    color: #9475c8;
+    font-size: 12px;
+    transition: transform 0.25s ease;
+}
+
+.call-us-toggle[aria-expanded="true"] .call-us-arrow {
+    transform: rotate(180deg);
+}
+
+.call-us-details {
+    padding: 0 16px 18px;
+    animation: callUsReveal 0.25s ease;
+}
+
+.call-us-details[hidden] {
+    display: none;
+}
+
+.call-us-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    margin-bottom: 14px;
+    border-top: 1px solid #f0ebf6;
+}
+
+.call-us-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #382064, #8d6ac2);
+    color: #ffffff;
+    /* font-family: 'Playfair Display', serif; */
+    font: italic 500 clamp(30px, 4vw, 54px)/1.15 'Playfair Display', serif;
+    font-size: 19px;
+}
+
+.call-us-person div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.call-us-person strong {
+    color: #25104f;
+    font-size: 15px;
+}
+
+.call-us-person small {
+    color: #898294;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.call-us-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border-radius: 10px;
+    background: #25104f;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.call-us-whatsapp i {
+    font-size: 17px;
+}
+
+.call-us-whatsapp:hover {
+    background: #432276;
+    transform: translateY(-1px);
+}
+
+.call-us-toggle:focus-visible,
+.call-us-whatsapp:focus-visible {
+    outline: 3px solid #b69add;
+    outline-offset: 3px;
+}
+
+@keyframes callUsReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablets */
+@media (max-width: 850px) {
+    .call-us-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .call-us-section {
+        margin: 30px 14px;
+        padding: 40px 16px;
+        border-radius: 18px;
+    }
+
+    .call-us-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .call-us-toggle {
+        min-height: 86px;
+        padding: 16px;
+    }
+
+    .call-us-heading p {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .call-us-card,
+    .call-us-arrow,
+    .call-us-whatsapp {
+        transition: none;
+    }
+
+    .call-us-details {
+        animation: none;
     }
 }
